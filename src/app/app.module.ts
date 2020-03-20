@@ -8,13 +8,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   
   declarations: [
     AppComponent,
     ProductListComponent,
-    TopBarComponent
+    TopBarComponent,
+    ProductDetailsComponent
   ],
   
   imports: [
@@ -22,7 +24,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     // AppRoutingModule
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent }
+      { path: '', component: ProductListComponent },
+      { path: 'products/:productId', component: ProductDetailsComponent},
     ])
   ],
 
